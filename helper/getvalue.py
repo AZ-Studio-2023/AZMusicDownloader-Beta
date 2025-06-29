@@ -14,9 +14,9 @@ music_path_value = QStandardPaths.writableLocation(QStandardPaths.MusicLocation)
 autopath = "{}\\AZMusicDownload".format(music_path_value)
 localView = None
 
-autoncmaapi = "https://md.azteam.cn/"  # API为ncma的克隆项目
+autoncmaapi = "https://ncma.azstudio.click/"  # API为ncma的克隆项目
 autoqqmaapi = ""
-apilists = ['NCMA', 'QQMA']
+apilists = ['NCMA', 'QQMA', 'Bilibili']
 playlistSong = ""
 searchSong = ""
 download_search_song = ""
@@ -115,11 +115,10 @@ def set_download_playlist_song(value):
 
 YEAR = int(date.today().year)
 AUTHOR = "AZ Studio"
-VERSION = "2.8.0"
-UPDATE_ORDER = 16
+VERSION = "2.9.0"
+UPDATE_ORDER = 17
 HELP_URL = "https://md.azteam.cn/docs/"
 FEEDBACK_URL = "https://github.com/AZ-Studio-2023/AZMusicDownloader/issues"
-RELEASE_URL = "https://github.com/AZ-Studio-2023/AZMusicDownloader/releases/tag/v2.8.0"
+RELEASE_URL = "https://github.com/AZ-Studio-2023/AZMusicDownloader/releases/tag/v2.9.0"
 AZ_URL = "https://azteam.cn/"
-PLU_URL = "https://plugins.md.azprod.cn/"
-SERVER_URL = "https://www.lcyidc.com/"
+PLU_URL = "https://plugins.md.azteam.cn/"
