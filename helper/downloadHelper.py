@@ -36,7 +36,6 @@ class downloading(QThread):
             api = data["api"]
         song = data["song"]
         singer = data["singer"]
-
         if pfg.apicard.value == "QQMA" and self.howto == "search":
             url = AZMusicAPI.geturl(id=id, api=api, server="qqma")
         elif pfg.apicard.value == "NCMA" and self.howto == "search":
@@ -73,7 +72,10 @@ class downloading(QThread):
             if cfg.debug_card.value:
                 logger.error(f"插件错误：{error_msg}")
             self.finished.emit("Error")
-
+        if url == None:
+            self.show_error = "Error 3"
+            self.finished.emit("Error")
+            return
         if not "Error" in url:
             response = requests.get(url, stream=True)
             file_size = int(response.headers.get('content-length', 0))
